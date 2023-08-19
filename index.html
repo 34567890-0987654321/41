@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>сайт про картины</title>
+    <link rel="stylesheet" href="min.css"><!-- кнопки -->
+    
+    <style>
+        body {
+            background-color: black;
+            position: relative;
+        }
+
+        .dot {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .button {
+            position: absolute;
+            
+            top: 50px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createDot() {
+            var dot = document.createElement("div");
+            dot.className = "dot";
+            dot.style.width = Math.floor(Math.random() * 20 + 5) + "px";
+            dot.style.height = dot.style.width;
+            dot.style.backgroundColor = getRandomColor();
+            dot.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+            dot.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+            document.body.appendChild(dot);
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        setInterval(createDot, 100);
+    </script>
+
+    <button   class="button" onclick="window.location.href='http://192.168.0.25:5500/pk/wwwwww.html'">рисовать</button>
+    <div class="wrapper">
+    
+        <div class="sub-main">
+           <a href="http://192.168.0.25:5500/pk/index.html" ><button class="button-three">перейти на сайт </button> </a>
+          </div>
+      </div>
+    
+</body>
+</html>
